@@ -1,0 +1,496 @@
+:root{
+    --bcc:#16ffbd;
+    --blac:#000; 
+    --light:#ff8dac; 
+}
+*{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 2;
+    padding: 0%;
+    box-sizing: border-box;
+    margin: 0%;
+}
+
+::-moz-selection{
+    background-color: #ff8dac;
+}
+::selection{
+    background-color: #ff8dac;
+}
+body{
+    background-color: var(--bcc);
+}
+a{
+    color: var(--blac);
+    text-decoration: none;
+    /*padding: 25px;*/
+    font-size: 1.7rem;
+    width: max-content;
+    text-align: center;
+    transition: color .2s ease-in-out;
+}
+a:hover{
+    color: var(--light);
+}
+h2,h3,b{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h2,b{
+    font-size: 2.5rem;
+    text-align: center;
+}
+h3{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.conteiner{
+    max-width: 1920px;
+}
+.menu ul li {
+animation: aparece 1.4s ease-in-out;
+}
+a i svg:hover{
+fill: var(--light);
+}
+.menu{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto 0 auto;
+    width: 80%;
+    align-items: center;
+}
+.menu > div{
+    width: 33%;
+}
+.logo img{
+    width: 100%;
+    animation: aparece 1.4s ease-in-out;
+}
+
+.menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+@keyframes aparece{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+.header .logo{
+    text-align: center;
+    flex-grow: 2;
+}
+.header .logo img{
+    width: 64px;
+}
+.menu-mobil ul{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+.cloro{
+    display: none;
+}
+.menu-mobil ul li {
+    text-align: center;
+}
+.menu-mobil{
+    display: none;
+}
+/*
+haora ek video va
+*/
+
+.video-main{
+    max-width: 100%;
+    margin-top: 150px;
+    transform-origin: 0 0 ;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 100px;
+    transform: skewY(-10deg);
+}
+.video video{
+    max-width: 100%;
+    overflow: hidden;
+    transform: skewY(10deg) scale(1.4, 1.4);
+}
+/*
+intro
+*/
+.intro{
+    text-align: center;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: -80px;
+    padding: 20px;
+}
+
+/*
+work
+*/
+.work{
+    padding-top:150px ;
+    transform-origin: 0,0;
+    transform: skewY(-10deg);
+}
+.w{
+    width: 100%;
+}
+.grid{
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(3,1fr);
+   /* grid-template-rows: repeat(3,1fr);*/
+}
+.grid .item{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+   padding: 0%;height: 250px;
+   
+}
+.grid .item:hover img{
+    transform: scale(1.3) skewY(10deg);
+}
+
+.grid img {
+    transform: scale(1.2) skewY(10deg);
+    margin-top: -30px;
+     margin-top: -40px;
+    transition: all 0.5s;
+}
+
+.bg-hover{
+    transform: scale(1,1) skewY(10deg);
+    position: absolute;
+    display: grid;
+    gap: 0;
+    height: 150%;
+    width: 100%;
+    top: -25%;
+    opacity: 0;
+    z-index: 2;
+    font-size: 16px;
+    text-align: center;
+     transition: opacity .5s ease-in-out;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background: rgb(0, 0,0,.7);
+}
+.bg-hover div:nth-child(2){
+    margin: 0;
+    margin-top:-50%;
+    padding: 0%;
+}
+.item:hover .bg-hover{
+    overflow: hidden;
+   
+    opacity: 1;
+  
+}
+.bg-hover:hover .info{
+   animation-name: bounce;
+   animation-duration:0.7s ;
+   animation-timing-function: ease-in-out;
+}
+.title{
+    color: #fff;
+
+}
+.custom{
+    color: var(--bcc);
+}
+.w{
+    margin-bottom: 100px;
+}
+.about{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 150px;
+}
+.about .colum{
+    display: flex;
+    justify-content: space-between;
+}
+.about .colum div{
+ width: 100%;
+ padding: 10px;
+}
+
+
+.contact{
+    background-color: #000;
+    color: #fff;
+    margin-bottom:100px ;
+    transform: skewY(-10deg);
+
+}
+.contact .columns{
+    transform: skewY(10deg);
+    padding-top: 100px;
+    text-align: center;
+    width:70% ;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding-bottom: 150px;
+}
+.location{
+    text-align: left;
+}
+
+.columns  .location h3{
+    text-align: left;
+}
+.columns .gmail h3{
+    text-align: right;
+}
+.gmail{
+    text-align: right;
+}
+@keyframes bounce{
+    0%{
+        transform: translateY(500px);
+
+    }
+    80%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes dey-tey{
+    0%{
+        height: 0vh;
+    }
+    50%{
+        height: 150vh;
+    }
+    100%{
+        height: 0%;
+    }
+}
+/*
+#screen
+*/
+#screen{
+    position: fixed;
+    top: -250px;
+    left: 0;
+    width: 100vw;
+    height: 10vh;
+    z-index: 1000;
+    transform: skewY(-10deg);
+    background-color: var(--light);
+    transition: all .7s;
+    animation-timing-function: var(--light);
+    animation-duration: .9rgs;
+}
+#detalles-conteiner{
+    background-color: var(--bcc);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0%;
+    z-index: 10;
+    overflow: auto;
+    display: none;
+}
+
+#detalles-conteiner .nav-bars{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+.item-hiden{
+    display: none;
+}
+#detalles-conteiner .items{
+    width: 60%;text-align: center;
+    margin: 0 auto;
+}
+
+/*
+Las medias query van aqui
+*/
+@media screen and (max-width:1000px){
+    .video-main{
+        height: 400px;
+    }
+    .video{
+        transform: scale(1.6);
+    }
+
+    .contact .columns{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+.contact .columns .location{
+    text-align: center;
+}
+
+.contact .columns  .location h3{
+    text-align: center;
+}
+.contact .columns .gmail h3{
+    text-align: center;
+}
+.contact .gmail{
+    text-align: center;
+}
+}
+
+@media screen and (max-width:1500px){
+    .grid .item{
+        height: 220px;
+
+    }
+    .item img{
+        transform: scale(1.2) skewY(10deg);
+    }
+}
+@media screen and (max-width:1340px){
+    .item:nth-child(2) img{
+        transform: scale(1.3) skewY(10deg);
+    }
+    .grid .item{
+        height: 200px;
+    }
+}
+@media (max-width:1210px){
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .item:last-child{
+        display: none;
+    }
+    .item:nth-child(2) img{
+        transform: scale(1.5) skewY(10deg);
+    }
+    .item:nth-child(2):hover img{
+        transform: scale(1.7) skewY(10deg);
+    }
+}
+@media (max-width:750px){
+    .menu-mobil{
+        display: block;
+        margin-top: 50px;
+    }
+    .menu{
+        display: none;
+    
+    }
+    .grid .item{
+        height: 150px;
+    }
+    .about{
+        width: 50%;
+    }
+    .about .colum {
+        flex-direction: column;
+    }
+    .about .colum div{
+        padding: 20px;
+    }
+    .item img{
+        transform: scale(1.3) skewY(10deg);
+    }
+    .grid .item:hover img{
+        transform: scale(1.2) skewY(10deg);
+    }
+    .item:nth-child(2) img{
+        transform: scale(1.3) skewY(10deg);
+    }
+
+    .item:nth-child(2):hover img{
+        transform: scale(1.4) skewY(10deg);
+    }
+}
+@media (max-width:650px){
+    .grid .item{
+        height: 125px;
+    }
+    .item img{
+        transform: scale(1.5) skewY(10deg);
+    }
+    .grid .item:hover img{
+        transform: scale(1.7) skewY(10deg);
+    }
+    .item:nth-child(2) img{
+        transform: scale(1.7) skewY(10deg);
+    }
+
+    .item:nth-child(2):hover img{
+        transform: scale(1.8) skewY(10deg);
+    }
+}
+@media screen and (max-width:550px) {
+    .menu-mobil{
+        display: block;
+        margin-top: 50px;
+    }
+    .menu{
+        display: none;
+    
+    }
+    .video-main{
+        height: 300px;
+    }
+    .video{
+        max-height: 400px;
+        transform: skewY(-10deg) scale(1.4,1.4);
+    }
+    video{
+        margin-top: 0;
+
+      
+    }
+}
+@media (max-width:450px){
+    .grid{
+
+        grid-template-columns: 1fr;
+    }
+    .grid .item{
+        height: 150px;
+    }
+    .item img{
+        transform: scale(1.3) skewY(10deg);
+    }
+    .grid .item:hover img{
+        transform: scale(1.2) skewY(10deg);
+    }
+    .item:nth-child(2) img{
+        transform: scale(1.3) skewY(10deg);
+    }
+
+    .item:nth-child(2):hover img{
+        transform: scale(1.4) skewY(10deg);
+    }
+}
